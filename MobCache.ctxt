@@ -2,6 +2,8 @@
 comment0.target=MobCache
 comment1.params=mobID
 comment1.target=Personagem\ getMob(int)
-comment2.params=mo\ quant
-comment2.target=void\ loadCache(java.lang.String,\ int)
-numComments=3
+comment2.params=
+comment2.target=int\ getSize()
+comment3.params=mo\ quant
+comment3.target=void\ loadCache(java.lang.String,\ int)
+numComments=4

@@ -1,5 +1,6 @@
 import java.util.*;
 import greenfoot.*;
+
 public class MobCache{
      
     private static Hashtable<Integer, Personagem> map = new Hashtable<Integer, Personagem>();
@@ -10,12 +11,16 @@ public class MobCache{
         return (Personagem) cachedMod.clone();       
     
     }
+    public static int getSize(){
+        return map.size();
+    }
     
     public static void loadCache(String mo, int quant){
         Actor mob = mobFactory.getMob(mo);
-        
+       
         for(int i = 0; i < quant; i++)
-            map.put(i, (Personagem) mob);
+           map.put(i, (Personagem) mob);
+        
   
         }
     

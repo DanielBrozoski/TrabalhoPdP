@@ -30,7 +30,7 @@ public class Personagem extends Actor implements Mob, Cloneable
    private static Personagem p1 = null;
 
    
-   public Personagem(String[] imagens){
+   public Personagem(String[] imagens, String nome){
        this.frente = new GreenfootImage(imagens[0]);
        this.frente1 = new GreenfootImage(imagens[1]);
        this.frente2 = new GreenfootImage(imagens[2]);
@@ -51,11 +51,18 @@ public class Personagem extends Actor implements Mob, Cloneable
        tempoAni = 0;
    } 
    
+   public String getNome(){
+       return nome;
+    }
+   
     public void act() 
     {
         tempoAni++;
         if(tempoAni == 18) tempoAni = 0;
         movimentacao();
+        
+        World mundo = getWorld();
+        mundo.showText(tempoAni + "", 100, 100);
     }    
     
     public int getx(){

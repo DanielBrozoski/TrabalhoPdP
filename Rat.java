@@ -14,9 +14,9 @@ public class Rat extends Personagem{
                          "a_right0.png", "a_right1.png", "a_right2.png",
                          "a_back0.png" , "a_back1.png" , "a_back2.png"};
        
-    
+   
     public Rat(){
-        super(imagens);
+        super(imagens, "rat");
     }   
     
     @Override
