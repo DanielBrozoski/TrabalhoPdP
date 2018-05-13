@@ -1,6 +1,6 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
-public class Personagem extends Actor implements Mob
+public class Personagem extends Actor implements Mob, Cloneable
 {
    private GreenfootImage frente;
    private GreenfootImage frente1;
@@ -20,6 +20,8 @@ public class Personagem extends Actor implements Mob
    
    
    private String nome;
+   
+   int id;
    
    private int x,y;
    private int velocidade = 3;
@@ -130,13 +132,30 @@ public class Personagem extends Actor implements Mob
         }
     }
     
+    public void setID(int id){
+        this.id = id;
+    }
+    
     public static Personagem getInstance(String choice){
         if(p1 == null){
             AbstractFactory playerFactory = FactoryProducer.getFactory("PLAYABLEFACTORY");
             p1 = playerFactory.getPlayable(choice);
         }else if(choice.equals("current"))
             return p1;
-            
+
         return p1;      
     }
+    
+    public Object clone() {
+      Object clone = null;
+      
+      try {
+         clone = super.clone();
+         
+      } catch (CloneNotSupportedException e) {
+         e.printStackTrace();
+      }
+      
+      return clone;
+   }
 }

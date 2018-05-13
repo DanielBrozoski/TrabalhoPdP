@@ -26,8 +26,15 @@ public class MyWorld extends World
         Actor mob = mobFactory.getMob("rat");
         addObject(mob, 222,222);
         
-        Actor mob1 = mobFactory.getMob("troll");
-        addObject(mob1, 222,222);
+        MobCache.loadCache("troll", 3);
         
+        Troll clo = (Troll) MobCache.getMob(1);
+        addObject(clo, 222,222);
+        
+         Troll clo3 = (Troll) MobCache.getMob(2);
+         addObject(clo3, 222,222);
+        
+         Troll clo2 = (Troll) MobCache.getMob(0);
+         addObject(clo2, 222,222);
     }
 }
