@@ -18,9 +18,16 @@ public class MyWorld extends World
     
     private void init(){
         AbstractFactory playerFactory = FactoryProducer.getFactory("PLAYABLEFACTORY");
-       
+        AbstractFactory mobFactory = FactoryProducer.getFactory("MOBFACTORY");
+        
         Actor p = Personagem.getInstance("knight");
         addObject(p, 345,444);
+        
+        Actor mob = mobFactory.getMob("rat");
+        addObject(mob, 222,222);
+        
+        Actor mob1 = mobFactory.getMob("troll");
+        addObject(mob1, 222,222);
         
     }
 }

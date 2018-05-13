@@ -56,6 +56,13 @@ public class Personagem extends Actor implements Mob
         movimentacao();
     }    
     
+    public int getx(){
+        return this.x;
+    }
+    
+    public int gety(){
+        return this.y;
+    }
     public void movimentacao(){
          if(Greenfoot.isKeyDown("up")){
             this.animacao(1);
@@ -127,7 +134,9 @@ public class Personagem extends Actor implements Mob
         if(p1 == null){
             AbstractFactory playerFactory = FactoryProducer.getFactory("PLAYABLEFACTORY");
             p1 = playerFactory.getPlayable(choice);
-        }
+        }else if(choice.equals("current"))
+            return p1;
+            
         return p1;      
     }
 }
