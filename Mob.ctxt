@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Mob
+comment1.params=
+comment1.target=void\ movimentacao()
+comment2.params=
+comment2.target=void\ ataque()
+comment3.params=animacao
+comment3.target=void\ animacao(int)
+numComments=4

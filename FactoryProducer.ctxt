@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=FactoryProducer
+comment1.params=choice
+comment1.target=AbstractFactory\ getFactory(java.lang.String)
+numComments=2

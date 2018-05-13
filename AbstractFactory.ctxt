@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=AbstractFactory
+comment1.params=name
+comment1.target=greenfoot.Actor\ getMob(java.lang.String)
+comment2.params=name
+comment2.target=Personagem\ getPlayable(java.lang.String)
+numComments=3

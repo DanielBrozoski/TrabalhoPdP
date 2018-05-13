@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Personagem
+comment1.params=imagens
+comment1.target=Personagem(java.lang.String[])
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ movimentacao()
+comment4.params=
+comment4.target=void\ ataque()
+comment5.params=animacao
+comment5.target=void\ animacao(int)
+comment6.params=choice
+comment6.target=Personagem\ getInstance(java.lang.String)
+numComments=7
