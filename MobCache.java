@@ -15,16 +15,20 @@ public class MobCache{
         return map.size();
     }
     
-    public static void loadCache(String mo, int quant){
-        Actor mob = mobFactory.getMob(mo);
-       
-        for(int i = 0; i < quant; i++)
-           map.put(i, (Personagem) mob);
+        public static void loadCache(String mo, int quant){
+            Troll mob = (Troll)mobFactory.getMob(mo);
+            
+            for(int i = 0; i < quant; i++)
+               map.put(i, (Personagem) mob.clone());
+            
+      
+        }
         
   
-        }
+  
+    }
     
     
     
    
-}
+

@@ -1,11 +1,11 @@
 #BlueJ class context
 comment0.target=Spawner
-comment1.params=
-comment1.target=Spawner()
+comment1.params=prototipo
+comment1.target=Spawner(Personagem)
 comment2.params=
-comment2.target=void\ initSpawner()
+comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ spawna()
+comment3.target=Personagem\ spawnMonster()
 comment4.params=
-comment4.target=void\ act()
+comment4.target=void\ animacao()
 numComments=5

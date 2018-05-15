@@ -1,37 +1,43 @@
-// import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-// public class Spawner extends Actor{
-    // private Troll[] arrayMobs; 
-    // AbstractFactory mobFactory = FactoryProducer.getFactory("MOBFACTORY");
-    // World mundo;
-    // boolean init = false;
+import greenfoot.*;
+public class Spawner extends Actor{
     
-    // public Spawner(){
+    private Personagem prototipo;
+    private GreenfootImage frame01;
+    private GreenfootImage frame02;
+    private GreenfootImage frame03;
+    private int tempoAni;
+    
+    public Spawner(Personagem prototipo){
+        this.prototipo = prototipo;
+        frame01 = new GreenfootImage("a06.png");
+        frame02 = new GreenfootImage("a07.png");
+        frame03 = new GreenfootImage("a08.png");
         
-        // mundo = getWorld();
+        setImage(frame01);
+    }
+    
+    public void act(){
+        tempoAni++;
+        
+        if(tempoAni == 18) tempoAni = 0;
+            animacao();
        
-        // act();
-    // }
+
+    }
+           
+    public Personagem spawnMonster(){
+        return (Personagem)prototipo.clone();
+    }
     
-     // public void initSpawner(){
-    
-     // MobCache.loadCache("troll", 15); 
-    // }
-    
-    // public void spawna(){    
-          // Personagem lol = (Troll) MobCache.getMob(0);
-          // mundo.addObject(lol, 222,222);
-        // }
-            
-        // public void act(){ 
-             // while(!init){    
-             // initSpawner();
-             // init = true;
-            // }
-        // spawna();
+    public void animacao(){
+        if(tempoAni == 0)
+                    setImage(frame01);
+                if(tempoAni == 9)
+                    setImage(frame02);
+                if(tempoAni == 18)
+                    setImage(frame03);
         
-    // }
-        
-        
-    // }
+    }
     
+       
+}

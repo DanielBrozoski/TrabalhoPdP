@@ -3,7 +3,7 @@ import greenfoot.*;
 public class PlayableFactory extends AbstractFactory{
 
     @Override
-    public Actor getMob(String name){
+    public Personagem getMob(String name){
         return null;
     }
     

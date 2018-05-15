@@ -7,7 +7,7 @@ public class Troll extends Personagem{
                          "b_back0.png" , "b_back1.png" , "b_back2.png"};
                          
    public Troll(){
-       super(imagens, "troll");
+       super(imagens);
     }   
     
     @Override

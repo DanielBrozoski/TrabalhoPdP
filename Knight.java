@@ -8,7 +8,7 @@ public class Knight extends Personagem{
        
     
     public Knight(){
-        super(imagens, "batata");
+        super(imagens);
     }
 
 }

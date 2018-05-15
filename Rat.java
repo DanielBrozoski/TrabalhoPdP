@@ -14,16 +14,15 @@ public class Rat extends Personagem{
                          "a_right0.png", "a_right1.png", "a_right2.png",
                          "a_back0.png" , "a_back1.png" , "a_back2.png"};
        
-   
+                         
+   boolean init = false;
     public Rat(){
-        super(imagens, "rat");
+        super(imagens);
     }   
     
     @Override
     public void movimentacao(){
        Personagem p = Personagem.getInstance("current");
-       getWorld().showText("Expetience" + p.getx(), 100, 50);
-        getWorld().showText("Level" + this.x, 100, 30);
         if(p.gety() <= this.y){
              this.animacao(1);
             y -= 2;
